@@ -4,10 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!--FONT AWESOME-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+    />
     <link rel="stylesheet" href="styles.css" />
     <title>PaintJS</title>
   </head>
   <body>
+    <h2>LET'S PAINT!!</h2>
     <canvas id="jsCanvas" class="canvas"></canvas>
     <div class="controls">
       <div class="controls_range">
@@ -22,8 +28,13 @@
         <!-- Adjust color to the current color used-->
       </div>
       <div class="controls_btns">
-        <button id="jsMode">Fill</button>
-        <button id="jsSave">Save</button>
+        <button class="modeBtn" id="penBtn">
+          <i id="pen" class="fas fa-paint-brush"></i>
+        </button>
+        <button class="modeBtn" id="fillBtn" disabled>
+          <i id="fill" class="fas fa-fill-drip"></i>
+        </button>
+        <button><i id="jsSave" class="fas fa-download"></i></button>
       </div>
       <div class="controls_colors" id="jsColors">
         <div
@@ -60,6 +71,8 @@
         ></div>
       </div>
     </div>
+    <!--JQUERY CDN-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="app.js"></script>
   </body>
 </html>

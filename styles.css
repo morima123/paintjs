@@ -1,25 +1,35 @@
 @import "reset.css";
+@import "https://fonts.googleapis.com/css2?family=Lobster&family=Ranchers&display=swap";
 
+* {
+  box-sizing: border-box;
+}
 body {
   background-color: #f6f9fc;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Ranchers", cursive;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 50px 0px;
 }
 
+h2 {
+  font-size: 2.5em;
+  font-weight: 600;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+}
+
 .canvas {
-  width: 700px;
-  height: 700px;
+  width: 800px;
+  height: 500px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 }
 
 .controls {
-  margin-top: 80px;
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,18 +38,27 @@ body {
 .controls .controls_range {
   margin-bottom: 30px;
 }
+
+.controls .controls_range input {
+  cursor: grab;
+}
+
 .controls .controls_btns {
   margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .controls_btns button {
   all: unset;
   cursor: pointer;
   background-color: #fff;
-  padding: 5px 0px;
-  width: 80px;
+  margin: 0 5px;
+  width: 50px;
+  height: 30px;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 20px;
   box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
   border: 2px solid rgba(0, 0, 0, 0.2);
   color: rgba(0, 0, 0, 0.7);
@@ -48,7 +67,19 @@ body {
   font-size: 12px;
 }
 .controls_btns button:active {
+  transform: scale(0.95);
+}
+.controls_btns .modeBtn:disabled {
+  background: rgba(0, 0, 0, 0.2);
   transform: scale(0.98);
+  box-shadow: inset 0 4px 6px rgba(50, 50, 93, 0.2), inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+.controls button .fas {
+  font-size: 20px;
+  height: 100%;
+  width: 100%;
+  line-height: 30px;
+  text-align: center;
 }
 
 .controls .controls_colors {
@@ -58,6 +89,7 @@ body {
   width: 50px;
   height: 50px;
   border-radius: 25px;
+  margin: 0 7px;
   cursor: pointer;
-  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.3);
 }
